@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:12:47 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/26 14:36:08 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/04/29 15:12:28 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
-
+/*
 void	print_list(t_list *lst)
 {
 	while (lst)
@@ -52,7 +52,7 @@ int	main(void)
 	ft_lstadd_back(&head, node3);
 	printf("List after additions: ");
     print_list(head);
-}
+}*/
 
 /*
 Test Case	What it verifies
