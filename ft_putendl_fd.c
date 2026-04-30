@@ -6,12 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:23:43 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/29 15:11:49 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/04/30 13:53:52 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {

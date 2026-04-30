@@ -22,16 +22,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
-	free(*lst);
-	*lst = NULL;
 }
-
 /*
 Deletes and frees the given node and all its successors, 
 using the function ’del’ and free(3).
 Finally, set the pointer to the list to NULL.
 */
-
 /*
 void	print_list(t_list *lst)
 {
@@ -43,6 +39,13 @@ void	print_list(t_list *lst)
 	printf("NULL\n");
 }
 
+void del_content(void *content)
+{
+    // Normally: free(content);
+    // For string literals: do nothing
+    (void)content; 
+}
+
 int	main(void)
 {
 	t_list *head = NULL;
@@ -50,20 +53,14 @@ int	main(void)
 	t_list *node2 = ft_lstnew("Second");
 	t_list *node3 = ft_lstnew("Third");
 
-    // Test ft_lstadd_front
+	ft_lstadd_front(&head, node3);
 	ft_lstadd_front(&head, node2);
-	ft_lstadd_front(&head, node1); // Head should now be "First"
-
-    // Test ft_lstadd_back
-	ft_lstadd_back(&head, node3);
-	printf("List after additions: ");
+	ft_lstadd_front(&head, node1);
+	printf("List after additions:\n");
     print_list(head);
-}*/
 
-/*
-Test Case	What it verifies
-Empty List	Pass NULL to ft_lstsize or ft_lstiter. Does it crash? (It shouldn't).
-Single Node	Add one node and then use ft_lstlast. Does it find it?
-Delete Head	Use ft_lstdelone on the first node. Did you re-link the head first?
-Clear All	Use ft_lstclear. Run your program with valgrind to check for leaks.
-*/
+	printf("Delete second and all following nodes:\n");
+	node1->next = NULL;
+	ft_lstclear(&node2, del_content);
+	print_list(head);
+}*/

@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:16:51 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/29 15:12:01 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/04/30 13:27:48 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,24 @@ Iterates through the list ’lst’ and applies the
 function ’f’ to the content of each node.
 */
 /*
+void	ft_strtoupper(char *s)
+{
+	int	i;
+
+	i = 0;
+	while(s[i])
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
+		i++;
+	}
+}
+
+void	ft_strtoupper_wrapper(void *content)
+{
+	ft_strtoupper((char *) content);
+}
+
 void	print_list(t_list *lst)
 {
 	while (lst)
@@ -42,24 +60,22 @@ void	print_list(t_list *lst)
 int	main(void)
 {
 	t_list *head = NULL;
-	t_list *node1 = ft_lstnew("First");
-	t_list *node2 = ft_lstnew("Second");
-	t_list *node3 = ft_lstnew("Third");
+    t_list *node1 = ft_lstnew(ft_strdup("First"));
+    t_list *node2 = ft_lstnew(ft_strdup("Second"));
+    t_list *node3 = ft_lstnew(ft_strdup("Third"));
 
-    // Test ft_lstadd_front
+    // fill list
+	ft_lstadd_front(&head, node3);
 	ft_lstadd_front(&head, node2);
-	ft_lstadd_front(&head, node1); // Head should now be "First"
-
-    // Test ft_lstadd_back
-	ft_lstadd_back(&head, node3);
-	printf("List after additions: ");
+	ft_lstadd_front(&head, node1);
+	printf("List before:\n");
     print_list(head);
-}*/
 
-/*
-Test Case	What it verifies
-Empty List	Pass NULL to ft_lstsize or ft_lstiter. Does it crash? (It shouldn't).
-Single Node	Add one node and then use ft_lstlast. Does it find it?
-Delete Head	Use ft_lstdelone on the first node. Did you re-link the head first?
-Clear All	Use ft_lstclear. Run your program with valgrind to check for leaks.
+    // Test ft_lstiter
+	ft_lstiter(head, ft_strtoupper_wrapper);
+	printf("List after ft applied:\n");
+    print_list(head);
+
+	ft_lstclear(&head, free);
+}
 */

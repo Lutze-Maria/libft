@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:17:35 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/29 15:10:51 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/04/30 13:45:51 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,33 @@ and creates a new list resulting of the successive applications
 of the function ’f’. 
 The ’del’ function is used to delete the content of a node if needed.
 */
-
 /*
+void	ft_strtoupper(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
+		i++;
+	}
+}
+
+void	*ft_map_toupper(void *content)
+{
+	char	*new_str;
+
+	if (!content)
+		return (NULL);
+	new_str = ft_strdup((char *)content);
+	if (!new_str)
+		return (NULL);
+	ft_strtoupper(new_str);
+	return ((void *)new_str);
+}
+
 void	print_list(t_list *lst)
 {
 	while (lst)
@@ -57,23 +82,22 @@ void	print_list(t_list *lst)
 int	main(void)
 {
 	t_list *head = NULL;
-	t_list *node1 = ft_lstnew("First");
-	t_list *node2 = ft_lstnew("Second");
-	t_list *node3 = ft_lstnew("Third");
+    t_list *node1 = ft_lstnew(ft_strdup("First"));
+    t_list *node2 = ft_lstnew(ft_strdup("Second"));
+    t_list *node3 = ft_lstnew(ft_strdup("Third"));
 
-    // Test ft_lstadd_front
+    // fill list
+	ft_lstadd_front(&head, node3);
 	ft_lstadd_front(&head, node2);
-	ft_lstadd_front(&head, node1); // Head should now be "First"
-
-    // Test ft_lstadd_back
-	ft_lstadd_back(&head, node3);
-	printf("List after additions: ");
+	ft_lstadd_front(&head, node1);
+	printf("List before:\n");
     print_list(head);
+
+    // Test ft_lstiter
+	t_list	*newlst_head = ft_lstmap(head, ft_map_toupper, free);
+	printf("New list after ft applied to old list:\n");
+    print_list(newlst_head);
+
+	ft_lstclear(&newlst_head, free);
+	ft_lstclear(&head, free);
 }*/
-/*
-Test Case	What it verifies
-Empty List	Pass NULL to ft_lstsize or ft_lstiter. Does it crash? (It shouldn't).
-Single Node	Add one node and then use ft_lstlast. Does it find it?
-Delete Head	Use ft_lstdelone on the first node. Did you re-link the head first?
-Clear All	Use ft_lstclear. Run your program with valgrind to check for leaks.
-*/

@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:14:09 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/27 14:08:10 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/04/30 13:51:13 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int	main(void)
 {
-	char			*s = "The original string from which to create the substring.";
+	char			*s = "The original string to create the substring.";
 	unsigned int	start = 4;
 	size_t			len = 12;
 

@@ -6,28 +6,28 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 10:10:36 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/27 13:39:30 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/04/30 13:54:18 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char     *ft_extract_word(const char *s, int len)
+static char	*ft_extract_word(const char *s, int len)
 {
-    char    *word;
-    int     i;
+	char	*word;
+	int		i;
 
-    word = malloc(sizeof(char) * (len + 1));
-    if (!word)
-        return (NULL);
-    i = 0;
-    while (i < len)
-    {
-        word[i] = s[i];
-        i++;
-    }
-    word[i] = '\0';
-    return (word);
+	word = malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
 }
 
 static char	**ft_free_all(char **result, int index)
@@ -41,7 +41,7 @@ static char	**ft_free_all(char **result, int index)
 	return (NULL);
 }
 
-static char **ft_fill_result(char **result, char const *s, char c)
+static char	**ft_fill_result(char **result, char const *s, char c)
 {
 	int	i;
 	int	index;
@@ -101,7 +101,7 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (words + 1));
 	if (!result)
 		return (NULL);
-    ft_fill_result(result, s, c);
+	ft_fill_result(result, s, c);
 	return (result);
 }
 
