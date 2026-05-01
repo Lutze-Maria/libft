@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:18:48 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:58:12 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:24:13 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*newstr;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (0);
 	newstr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (newstr == 0)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 10:10:36 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:57:43 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:31:12 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,11 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (words + 1));
 	if (!result)
 		return (NULL);
+	if (words == 0)
+	{
+		result[0] = NULL;
+		return (result);
+	}
 	ft_fill_result(result, s, c);
 	return (result);
 }

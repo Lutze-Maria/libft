@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:54:41 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:56:26 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:39:19 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strnstr(const char *big, const char*little, size_t len)
 
 	i = 0;
 	if (*little == 0)
-	{
 		return ((char *)big);
-	}
+	if (!big && len == 0)
+		return (0);
 	while (big[i] && i < len)
 	{
 		j = 0;

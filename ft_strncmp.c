@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 09:25:43 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:55:33 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:14:23 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 {
 	char	s1[] = "hello world";
 	char	s2[] = " orld";
-	int		n = 5;
+	int		n = 0;
 
 	printf("%s\n", s1);
 	printf("%s\n", s2);

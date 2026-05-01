@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 14:19:00 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:54:00 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:48:31 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*s;
 	size_t			i;
 
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
 	if (!dst && !src)
 		return (0);
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
@@ -30,6 +30,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
 /*
 #include <stdio.h>
 #include <string.h>

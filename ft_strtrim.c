@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:15:10 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:57:34 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:34:29 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = ft_find_strpoint(s1, set);
 	end = ft_find_endpoint(s1, set);
-	if (start > end)
+	if (start > end || s1[0] == '\0')
 		return (ft_strdup(""));
 	trimstr = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (!trimstr)

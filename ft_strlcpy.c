@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 09:38:00 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:54:55 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:19:47 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	src_len;
 
+	if (!dst || !src)
+		return (0);
 	src_len = 0;
 	while (src[src_len])
 		src_len++;

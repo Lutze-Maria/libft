@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:52:58 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:56:55 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 16:13:25 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *s)
 	int		i;
 	char	*dest;
 
+	if (!s)
+		return (NULL);
 	dest = (char *)malloc(ft_strlen(s) + 1);
 	if (dest == 0)
 		return (0);
