@@ -6,16 +6,16 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:22:54 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/27 14:24:18 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 12:37:13 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (fd >= 0)
+		write(fd, &c, 1);
 }
 /*
 #include <fcntl.h>
@@ -24,7 +24,7 @@ void	ft_putchar_fd(char c, int fd)
 int	main(void)
 {
     int fd;
-
+    
     // O_WRONLY: Open for writing only
     // O_CREAT: Create the file if it doesn't exist
     // 0644: Standard file permissions (Owner can read/write, others read)

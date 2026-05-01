@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 08:41:15 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/30 12:12:16 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 12:30:06 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h> 
+//# include <stdio.h> 
 
 // Part 1 - Libc functions
 int		ft_isalpha(int c);

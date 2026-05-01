@@ -6,12 +6,12 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:17:31 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/27 12:22:04 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 13:21:38 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 static void	ft_reverse(char *s, int n)
 {
 	int		i;
@@ -25,26 +25,15 @@ static void	ft_reverse(char *s, int n)
 		s[n - 1 - i] = buffer;
 		i++;
 	}
-}
+}*/
 
-static void	ft_fillstr(char *s, long num, int isnegative)
+static void	ft_fillstr(char *s, long num, int len)
 {
-	int	i;
-
-	i = 0;
 	while (num != 0)
 	{
-		s[i] = (num % 10) + '0';
+		s[len--] = (num % 10) + '0';
 		num = num / 10;
-		i++;
 	}
-	if (isnegative)
-	{
-		s[i] = '-';
-		i++;
-	}
-	s[i] = '\0';
-	ft_reverse(s, i);
 }
 
 static int	ft_get_intsize(int n)
@@ -66,27 +55,27 @@ static int	ft_get_intsize(int n)
 
 char	*ft_itoa(int n)
 {
-	int		isnegative;
 	long	num;
 	int		len;
 	char	*s;
 
 	len = ft_get_intsize(n);
-	s = (char *)malloc(sizeof(char) * (len + 1));
+	s = malloc(sizeof(char) * (len + 1));
+	if (!s)
+		return (0);
+	s[len] = '\0';
 	if (n == 0)
 	{
 		s[0] = '0';
-		s[1] = '\0';
 		return (s);
 	}
-	isnegative = 0;
 	num = n;
 	if (num < 0)
 	{
-		isnegative = 1;
+		s[0] = '-';
 		num = -num;
 	}
-	ft_fillstr(s, num, isnegative);
+	ft_fillstr(s, num, (len - 1));
 	return (s);
 }
 /*

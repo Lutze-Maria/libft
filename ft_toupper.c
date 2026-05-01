@@ -6,11 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 15:56:25 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/26 09:05:14 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 10:52:13 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//include "libft.h"
 
 int	ft_toupper(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:45:19 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/26 09:12:39 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 10:49:49 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//include "libft.h"
 
 int	ft_isascii(int c)
 {

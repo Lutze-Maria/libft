@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:16:51 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/30 13:27:48 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 12:29:31 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*ptr;
-
-	ptr = lst;
-	while (ptr)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		f(ptr->content);
-		ptr = ptr->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
 

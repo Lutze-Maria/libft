@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:40:52 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/26 09:06:57 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 13:07:13 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 size_t	ft_strlen(const char *s)
 {
-	unsigned char	size_t;
+	size_t	c;
 
-	size_t = 0;
+	c = 0;
 	while (*s++)
 	{
-		size_t++;
+		c++;
 	}
-	return (size_t);
+	return (c);
 }
 /*
 #include <stdio.h>

@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <lschawer>.*
+*This project has been created as part of the 42 curriculum by lschawer.*
 # Libft
 
 
@@ -17,8 +17,11 @@ The Makefile compiles with the flags `-Wall`, `-Wextra`, and `-Werror`, using `c
 The Makefile contains the following rules:
 
 make all = default rule to create `libft.a`
+
 make clean = deletes the object files generated during compilation
+
 make fclean = deletes the object files AND the library (`libft.a`)
+
 make re = performs `fclean` followed by an `all` to re-compile everything from scratch
 
 **Using Libft**

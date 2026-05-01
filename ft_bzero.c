@@ -6,12 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 14:53:49 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/27 12:09:32 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 10:53:42 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 17:17:06 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/26 09:06:18 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 10:52:10 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//include "libft.h"
 
 int	ft_tolower(int c)
 {

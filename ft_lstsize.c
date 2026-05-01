@@ -6,7 +6,7 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 12:12:47 by lschawer          #+#    #+#             */
-/*   Updated: 2026/04/30 13:49:50 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 12:29:15 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 int	ft_lstsize(t_list *lst)
 {
 	int		size;
-	t_list	*tmp;
 
-	tmp = lst;
 	size = 0;
-	while (tmp)
+	while (lst)
 	{
-		tmp = tmp->next;
+		lst = lst->next;
 		size++;
 	}
 	return (size);
