@@ -6,26 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:17:31 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 13:21:38 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 13:26:12 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-static void	ft_reverse(char *s, int n)
-{
-	int		i;
-	char	buffer;
-
-	i = 0;
-	while (i < (n / 2))
-	{
-		buffer = s[i];
-		s[i] = s[n - 1 - i];
-		s[n - 1 - i] = buffer;
-		i++;
-	}
-}*/
 
 static void	ft_fillstr(char *s, long num, int len)
 {

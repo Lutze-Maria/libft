@@ -6,11 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:37:39 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:49:47 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 13:27:37 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//include "libft.h"
+//#include "libft.h"
 
 int	ft_isalpha(int c)
 {

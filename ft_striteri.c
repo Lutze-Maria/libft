@@ -6,11 +6,11 @@
 /*   By: lschawer <lschawer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:19:41 by lschawer          #+#    #+#             */
-/*   Updated: 2026/05/01 10:51:26 by lschawer         ###   ########.fr       */
+/*   Updated: 2026/05/01 13:28:25 by lschawer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//include "libft.h"
+//#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
